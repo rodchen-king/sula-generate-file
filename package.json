@@ -1,0 +1,27 @@
+{
+  "name": "sula-generate-file",
+  "version": "0.0.1",
+  "description": "生成基于sula的业务组件",
+  "main": "index.js",
+  "bin": {
+    "sgf": "./bin/sgf.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodchen-king/sula-generate-file.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodchen-king/sula-generate-file/issues"
+  },
+  "homepage": "https://github.com/rodchen-king/sula-generate-file#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "fs": "0.0.1-security"
+  }
+}

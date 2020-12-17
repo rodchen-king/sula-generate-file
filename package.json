@@ -1,6 +1,6 @@
 {
   "name": "sula-generate-file",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "生成基于sula的业务组件",
   "main": "index.js",
   "bin": {

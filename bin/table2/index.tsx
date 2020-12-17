@@ -335,7 +335,8 @@ export default () => {
     "columns": [
       {
         "key": "id",
-        "title": "订单号"
+        "title": "订单号",
+        "fixed": "left"
       },
       {
         "key": "email",
@@ -398,6 +399,7 @@ export default () => {
       {
         "key": "operator",
         "title": "操作",
+        "fixed": "right",
         "render": [
           {
             "type": "link",

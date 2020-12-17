@@ -3,189 +3,91 @@ import  SulaForm from '@/components/businessComponent/SulaForm';
 
 export default ({formatMessage}: any) => {
   const config = {
-    mode: "edit",
+    "mode": "edit",
     "fields": [
       {
         "name": "sender",
         "container": {
           "type": "card",
           "props": {
-            "title": "发送",
-            "type": "inner",
+            "title": "订单信息",
+            "type": "inner"
           }
         },
         "fields": [
           {
             "name": "senderName",
-            "label": formatMessage({id: 'itemAdd.senderLabel'}),
-            itemLayout: { span: 6},
-            "field": {
-              "type": "input",
-              "props": {
-                "placeholder": "请输入发送人姓名"
-              }
+            "label": "订单号",
+            "itemLayout": {
+              "span": 6
             },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-          {
-            "name": "secrecy",
-            "label": "是否保密",
-            itemLayout: { span: 6},
             "field": {
-              "type": "switch",
+              "type": "text",
               "props": {
-                "checkedChildren": "on",
-                "unCheckedChildren": "off"
+                "text": "000019871634"
               }
-            },
-            "valuePropName": "checked"
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
+            }
           },
           {
             "name": "senderName1",
-            "label": "发送人姓名",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "input",
-              "props": {
-                "placeholder": "请输入发送人姓名"
-              }
+            "label": "组织名称",
+            "itemLayout": {
+              "span": 6
             },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
+            "field": {
+              "type": "text",
+              "props": {
+                "text": "空运事业部"
               }
-            ]
+            }
           },
           {
-            "name": "secrecy",
-            "label": "是否保密",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "switch",
-              "props": {
-                "checkedChildren": "on",
-                "unCheckedChildren": "off"
-              }
+            "name": "senderName2",
+            "label": "业务类型",
+            "itemLayout": {
+              "span": 6
             },
-            "valuePropName": "checked"
+            "field": {
+              "type": "text",
+              "props": {
+                "text": "出口空运"
+              }
+            }
           },
           {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
+            "name": "kfu",
+            "label": "客服",
+            "itemLayout": {
+              "span": 6
             },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
+            "field": {
+              "type": "text",
+              "props": {
+                "text": "高圆圆"
               }
-            ]
+            }
           },
           {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
+            "name": "recipientName3",
+            "label": "客户",
+            "itemLayout": {
+              "span": 6
             },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-        ]
-      },
-      {
-        "name": "recipient",
-        "container": {
-          "type": "card",
-          "props": {
-            "title": "接收",
-            "type": "inner",
-          }
-        },
-        "fields": [
-          {
-            "name": "recipientName",
-            "label": "接收人姓名",
-            itemLayout: { span: 6},
             "field": {
               "type": "select",
               "props": {
-                "placeholder": "请选择接收人姓名"
+                "placeholder": "请选择客户"
               }
             },
-            initialSource: [
+            "initialSource": [
               {
-                text: '水果',
-                value: 'fruit',
+                "text": "广州货运代理",
+                "value": "广州货运代理"
               },
               {
-                text: '蔬菜',
-                value: 'vegetables',
-              },
+                "text": "深圳货运代理",
+                "value": "深圳货运代理"
+              }
             ],
             "rules": [
               {
@@ -195,36 +97,27 @@ export default ({formatMessage}: any) => {
             ]
           },
           {
-            "name": "recipientTime",
-            "label": "接收时间",
-            itemLayout: { span: 6},
+            "name": "yewuyuan",
+            "label": "业务员",
+            "itemLayout": {
+              "span": 6
+            },
             "field": {
-              "type": "checkboxgroup"
+              "type": "select",
+              "props": {
+                "placeholder": "请选择业务员"
+              }
             },
             "initialSource": [
               {
-                "text": "Morning",
-                "value": "morning"
+                "text": "水果",
+                "value": "fruit"
               },
               {
-                "text": "Afternoon",
-                "value": "afternoon"
-              },
-            ]
-          },
-          {
-            "name": "recipientNumber",
-            "label": "接收人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入接收人号码",
-                "style": {
-                  "width": "80%"
-                }
+                "text": "蔬菜",
+                "value": "vegetables"
               }
-            },
+            ],
             "rules": [
               {
                 "required": true,
@@ -233,18 +126,27 @@ export default ({formatMessage}: any) => {
             ]
           },
           {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
+            "name": "lianxiren",
+            "label": "联系人",
+            "itemLayout": {
+              "span": 6
+            },
             "field": {
-              "type": "inputnumber",
+              "type": "select",
               "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
+                "placeholder": "请选择联系人"
               }
             },
+            "initialSource": [
+              {
+                "text": "张三",
+                "value": "fruit"
+              },
+              {
+                "text": "李四",
+                "value": "vegetables"
+              }
+            ],
             "rules": [
               {
                 "required": true,
@@ -253,43 +155,56 @@ export default ({formatMessage}: any) => {
             ]
           },
           {
-            "name": "senderName",
-            "label": "发送人姓名",
-            itemLayout: { span: 6},
+            "name": "订单流转",
+            "label": "订单流转",
+            "itemLayout": {
+              "span": 6
+            },
+            "field": {
+              "type": "select",
+              "props": {
+                "placeholder": "请选择订单流转"
+              }
+            },
+            "initialSource": [
+              {
+                "text": "子公司",
+                "value": "fruit"
+              },
+              {
+                "text": "子公司2",
+                "value": "vegetables"
+              }
+            ],
+            "rules": [
+              {
+                "required": true,
+                "message": "该项为必填项"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "recipient111",
+        "container": {
+          "type": "card",
+          "props": {
+            "title": "货物信息",
+            "type": "inner"
+          }
+        },
+        "fields": [
+          {
+            "name": "name",
+            "label": "中文名称",
+            "itemLayout": {
+              "span": 6
+            },
             "field": {
               "type": "input",
               "props": {
-                "placeholder": "请输入发送人姓名"
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-          {
-            "name": "secrecy",
-            "label": "是否保密",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "switch",
-              "props": {
-                "checkedChildren": "on",
-                "unCheckedChildren": "off"
-              }
-            },
-            "valuePropName": "checked"
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
+                "placeholder": "请输入中文姓名",
                 "style": {
                   "width": "80%"
                 }
@@ -301,27 +216,7 @@ export default ({formatMessage}: any) => {
                 "message": "该项为必填项"
               }
             ]
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
+          }
         ]
       },
       {
@@ -329,19 +224,21 @@ export default ({formatMessage}: any) => {
         "container": {
           "type": "card",
           "props": {
-            "title": "基础",
+            "title": "选择服务类型",
             "type": "inner",
-            style: {
-              'margin-top': '20px',
-              'padding-bottom': '200px'
-            },
+            "style": {
+              "margin-top": "20px",
+              "padding-bottom": "200px"
+            }
           }
         },
         "fields": [
           {
             "name": "time",
             "label": "送货时间",
-            itemLayout: { span: 6},
+            "itemLayout": {
+              "span": 6
+            },
             "field": {
               "type": "rangepicker",
               "props": {
@@ -357,116 +254,9 @@ export default ({formatMessage}: any) => {
                 "message": "该项为必填项"
               }
             ]
-          },
-          {
-            "name": "priceProject",
-            "label": "价格保护",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "slider",
-              "props": {
-                "min": 0,
-                "max": 1000,
-                "step": 100,
-                "dots": true
-              }
-            },
-            "remoteSource": {
-              "url": "/api/manage/priceList.json"
-            }
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-          {
-            "name": "senderName",
-            "label": "发送人姓名",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "input",
-              "props": {
-                "placeholder": "请输入发送人姓名"
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-          {
-            "name": "secrecy",
-            "label": "是否保密",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "switch",
-              "props": {
-                "checkedChildren": "on",
-                "unCheckedChildren": "off"
-              }
-            },
-            "valuePropName": "checked"
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
-          {
-            "name": "senderNumber",
-            "label": "发送人号码",
-            itemLayout: { span: 6},
-            "field": {
-              "type": "inputnumber",
-              "props": {
-                "placeholder": "请输入发送人号码",
-                "style": {
-                  "width": "80%"
-                }
-              }
-            },
-            "rules": [
-              {
-                "required": true,
-                "message": "该项为必填项"
-              }
-            ]
-          },
+          }
         ]
-      },
+      }
     ],
     "submit": {
       "url": "/api/manage/add.json",
@@ -485,4 +275,3 @@ export default ({formatMessage}: any) => {
     <SulaForm {...config} />
   );
 }
-

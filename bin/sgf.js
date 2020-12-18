@@ -94,16 +94,16 @@ if (type === 'form') {
   filename = 'form'
 } else {
   switch(menu) {
-    case 1:
+    case '1':
       filename = 'table1';
       break;
-    case 2:
+    case '2':
       filename = 'table2';
       break;
-    case 3:
+    case '3':
       filename = 'table3';
       break;
-    case 4:
+    case '4':
       filename = 'table4';
       break;
     default:
